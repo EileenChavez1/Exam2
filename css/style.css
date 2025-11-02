@@ -1,0 +1,222 @@
+/* 
+  Student Name: Eileen Hernandez Chavez
+  File Name: style.css
+  Date: 10/31/2025
+  Project: Exam 2 - Future Technologies Website
+*/
+
+/*Import Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap');
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Base Styles*/
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #fdf6ef, #ffe3ba);
+  color: #2C2C2C;
+  line-height: 1.6;
+  opacity: 0.98;
+}
+
+/*Header*/
+header {
+  background: linear-gradient(90deg, #f08c2e, #d16a09);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/*Navigation*/
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/*Hero Section*/
+.hero {
+  background: linear-gradient(135deg, #ffba66, #e07b39);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin: 2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.hero h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.35);
+}
+
+/*Main Content*/
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/*Article Section*/
+.article-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+article {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+article h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #e07b39;
+  margin-bottom: 1rem;
+}
+
+article p {
+  color: #333;
+}
+
+/*Structural pseudo-class*/
+article:nth-of-type(2) {
+  border-left: 4px solid rgba(209, 106, 9, 0.8);
+  background-color: rgba(255, 247, 230, 0.9);
+  padding-left: 1.2rem;
+}
+
+/*Figures*/
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #b45f06;
+}
+
+/*Buttons*/
+.btn {
+  display: inline-block;
+  background-color: #e07b39;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background-color: #b45f06;
+  transform: scale(1.05);
+}
+
+/*Multi-Column*/
+.column-layout {
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 2rem;
+}
+
+/*Grid Layout*/
+.grid-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-showcase img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.grid-showcase img:nth-child(2) {
+  grid-column: span 2;
+}
+
+/*Footer*/
+footer {
+  background-color: #d16a09;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/*Responsive Layout*/
+@media (min-width: 768px) {
+  .article-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main {
+    padding: 3rem 4rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    padding: 6rem 4rem;
+  }
+}
